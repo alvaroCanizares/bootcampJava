@@ -1,5 +1,7 @@
 package vehiculos;
 
+import interfaz.Movible;
+
 public abstract class Vehiculo implements Movible{
 	private String id;
 	private int potencia;

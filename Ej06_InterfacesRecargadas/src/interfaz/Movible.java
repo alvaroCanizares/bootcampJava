@@ -1,4 +1,9 @@
-package vehiculos;
+package interfaz;
+
+import vehiculos.Avion;
+import vehiculos.Barco;
+import vehiculos.Coche;
+import vehiculos.Moto;
 
 public interface Movible {
 	final int POTENCIA_AVION =3;

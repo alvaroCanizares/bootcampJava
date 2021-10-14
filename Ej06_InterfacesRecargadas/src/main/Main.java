@@ -1,6 +1,12 @@
-package vehiculos;
+package main;
 
 import java.util.ArrayList;
+
+import vehiculos.Avion;
+import vehiculos.Barco;
+import vehiculos.Coche;
+import vehiculos.Moto;
+import vehiculos.Vehiculo;
 
 
 public class Main {
