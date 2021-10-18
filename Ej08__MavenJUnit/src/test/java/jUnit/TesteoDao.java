@@ -18,35 +18,35 @@ public class TesteoDao {
 	GestorCoche gestor = new GestorCoche();
 	
 	
-	@Test
-	public void alta() {
-		gestor.alta(cocheCorrecto);
-		Coche cocheRespuesta = gestor.obtener(cocheCorrecto.getMatricula());
-		assertEquals(cocheCorrecto, cocheRespuesta);
-	}
-	
-	@Test
-	public void baja() {
-		gestor.baja(cocheCorrecto.getMatricula());
-		Coche cocheRespuesta = gestor.obtener(cocheCorrecto.getMatricula());
-		assertNull(cocheRespuesta);
-	}
-	@Test
-	public void modificar() {
-		Coche cocheModificado = new Coche("0000002","****","****",0);
-		
-		gestor.alta(cocheCorrecto);
-		gestor.modificar(cocheModificado);
-		Coche cocheRespuesta = gestor.obtener(cocheCorrecto.getMatricula());
-		
-		assertEquals(cocheModificado, cocheRespuesta);
-	}
-
-	@Test
-	public void obtener() {
-		Coche cocheRespuesta = gestor.obtener(cocheCorrecto.getMatricula());
-		assertEquals(cocheCorrecto, cocheRespuesta);
-	}
+//	@Test
+//	public void alta() {
+//		gestor.alta(cocheCorrecto);
+//		Coche cocheRespuesta = gestor.obtener(cocheCorrecto.getMatricula());
+//		assertEquals(cocheCorrecto, cocheRespuesta);
+//	}
+//	
+//	@Test
+//	public void baja() {
+//		gestor.baja(cocheCorrecto.getMatricula());
+//		Coche cocheRespuesta = gestor.obtener(cocheCorrecto.getMatricula());
+//		assertNull(cocheRespuesta);
+//	}
+//	@Test
+//	public void modificar() {
+//		Coche cocheModificado = new Coche("0000002","****","****",0);
+//		
+//		gestor.alta(cocheCorrecto);
+//		gestor.modificar(cocheModificado);
+//		Coche cocheRespuesta = gestor.obtener(cocheCorrecto.getMatricula());
+//		
+//		assertEquals(cocheModificado, cocheRespuesta);
+//	}
+//
+//	@Test
+//	public void obtener() {
+//		Coche cocheRespuesta = gestor.obtener(cocheCorrecto.getMatricula());
+//		assertEquals(cocheCorrecto, cocheRespuesta);
+//	}
 
 	@Test
 	public void AAlistar() {
