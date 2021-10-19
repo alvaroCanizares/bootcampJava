@@ -31,7 +31,7 @@ public class Main {
 		aspirante2.setNombreSuperHeroe("SuperAspirante2");
 		aspirante2.setPoder(1);
 		
-		
+	
 		
 		listaSuperheroes.add(superMan);
 		listaSuperheroes.add(spiderman);
