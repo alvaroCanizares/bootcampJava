@@ -5,13 +5,13 @@ public class Periferico {
 	private double precio;
 	private String marca;
 	
-	public Periferico(TipoPeriferico nombre, double precio, String marca) {
-		super();
-		this.nombre = nombre;
-		this.precio = precio;
-		this.marca = marca;
-	}
-	
+//	public Periferico(TipoPeriferico nombre, double precio, String marca) {
+//		super();
+//		this.nombre = nombre;
+//		this.precio = precio;
+//		this.marca = marca;
+//	}
+//	
 	public TipoPeriferico getNombre() {
 		return nombre;
 	}

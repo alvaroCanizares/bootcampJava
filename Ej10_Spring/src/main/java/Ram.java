@@ -5,12 +5,12 @@ public class Ram {
 	private double hz;
 	private String generacion;
 	
-	public Ram(double precio, double hz, String generacion) {
-		super();
-		this.precio = precio;
-		this.hz = hz;
-		this.generacion = generacion;
-	}
+//	public Ram(double precio, double hz, String generacion) {
+//		super();
+//		this.precio = precio;
+//		this.hz = hz;
+//		this.generacion = generacion;
+//	}
 	public double getPrecio() {
 		return precio;
 	}

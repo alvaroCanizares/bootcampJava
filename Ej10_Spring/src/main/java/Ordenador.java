@@ -1,9 +1,9 @@
 
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Ordenador {
-	private double precio;
 	private String marca;
 	private List <Ram> listaRam;
 	private Procesador procesador;
@@ -11,25 +11,19 @@ public class Ordenador {
 	private List <Periferico> listaPerifericos;
 	private Placabase placabase;
 	
-	public Ordenador(String marca, List<Ram> listaRam, Procesador procesador,
-			List<TarjetaGrafica> listaTarjetaGrafica, List<Periferico> listaPerifericos, Placabase placabase) {
-		super();
-		this.marca = marca;
-		this.listaRam = listaRam;
-		this.procesador = procesador;
-		this.listaTarjetaGrafica = listaTarjetaGrafica;
-		this.listaPerifericos = listaPerifericos;
-		this.placabase = placabase;
-		precio = calcularPrecioComponentes();
-	}
+//	public Ordenador(String marca, List<Ram> listaRam, Procesador procesador,
+//			List<TarjetaGrafica> listaTarjetaGrafica, List<Periferico> listaPerifericos, Placabase placabase) {
+//		super();
+//		this.marca = marca;
+//		this.listaRam = listaRam;
+//		this.procesador = procesador;
+//		this.listaTarjetaGrafica = listaTarjetaGrafica;
+//		this.listaPerifericos = listaPerifericos;
+//		this.placabase = placabase;
+//		precio = calcularPrecioComponentes();
+//	}
 	
-	public double getPrecio() {
-		return precio;
-	}
 
-	public void setPrecio(double precio) {
-		this.precio = precio;
-	}
 
 	public String getMarca() {
 		return marca;
@@ -87,14 +81,17 @@ public class Ordenador {
 		
 		for (Ram ram : listaRam) {
 			totalRam += ram.getPrecio();
+			System.out.println(totalRam);
 		}
 		
 		for (TarjetaGrafica grafica : listaTarjetaGrafica) {
 			totalGrafica += grafica.getPrecio();
+			System.out.println(totalGrafica);
 		}
 		
 		for(Periferico periferico : listaPerifericos) {
 			totalPeriferico += periferico.getPrecio();
+			System.out.println(totalPeriferico);
 		}
 		total = totalRam + procesador.getPrecio() + totalGrafica + totalPeriferico + placabase.getPrecio();
 		
@@ -103,11 +100,11 @@ public class Ordenador {
 
 	@Override
 	public String toString() {
-		return "Ordenador [precio=" + precio + ", marca=" + marca + ", listaRam=" + listaRam + ", procesador="
+		return "Ordenador [marca=" + marca + ", listaRam=" + listaRam + ", procesador="
 				+ procesador + ", listaTarjetaGrafica=" + listaTarjetaGrafica + ", listaPerifericos=" + listaPerifericos
 				+ ", placabase=" + placabase + "]";
 	}
-
+	
 	
 	
 }

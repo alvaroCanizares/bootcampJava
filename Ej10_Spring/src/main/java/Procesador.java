@@ -6,13 +6,13 @@ public class Procesador {
 	private String marca;
 	private TarjetaGrafica tarjetaIntegrada;
 	
-	public Procesador(double precio, double hz, String marca, TarjetaGrafica tarjetaIntegrada) {
-		super();
-		this.precio = precio;
-		this.hz = hz;
-		this.marca = marca;
-		this.tarjetaIntegrada = tarjetaIntegrada;
-	}
+//	public Procesador(double precio, double hz, String marca, TarjetaGrafica tarjetaIntegrada) {
+//		super();
+//		this.precio = precio;
+//		this.hz = hz;
+//		this.marca = marca;
+//		this.tarjetaIntegrada = tarjetaIntegrada;
+//	}
 	public double getPrecio() {
 		return precio;
 	}

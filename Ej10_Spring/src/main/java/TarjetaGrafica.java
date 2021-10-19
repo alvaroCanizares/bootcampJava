@@ -29,11 +29,11 @@ public class TarjetaGrafica {
 	public void setModelo(String modelo) {
 		this.modelo = modelo;
 	}
-	public TarjetaGrafica(double precio, String marca, Ram ram, String modelo) {
-		super();
-		this.precio = precio;
-		this.marca = marca;
-		this.ram = ram;
-		this.modelo = modelo;
-	}
+//	public TarjetaGrafica(double precio, String marca, Ram ram, String modelo) {
+//		super();
+//		this.precio = precio;
+//		this.marca = marca;
+//		this.ram = ram;
+//		this.modelo = modelo;
+//	}
 }

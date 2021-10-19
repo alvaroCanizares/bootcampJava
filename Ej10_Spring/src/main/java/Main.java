@@ -12,6 +12,7 @@ public class Main {
 		
 		 System.out.println(pc);
 		 System.out.println(pc.calcularPrecioComponentes());
+	
 		
 	}
 

@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:util="http://www.springframework.org/schema/util"
 	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
 	
 	<!-- RAM -->
@@ -15,12 +16,12 @@
 		<property name="generacion" value="DDR6"></property>
 	</bean>
 	<bean id="rgraf" class="Ram" scope="singleton">
-		<property name="precio" value="50"></property>
+		<property name="precio" value='50'></property>
 		<property name="hz" value="3000"></property>
 		<property name="generacion" value="DDR6"></property>
 	</bean>
 	
-	<bean id="listaRam" class="Ram">
+	<bean id="listaRams" class="java.util.ArrayList">
 		<constructor-arg>
 			<list value-type="Ram">
 				<ref bean="ram1"/>
@@ -28,35 +29,29 @@
 			</list>
 		</constructor-arg>
 	</bean>
-	<!-- PROCESADOR -->
-	<bean id="procesador" class="Procesador" scope="singleton">
-		<property name="precio" value="300"></property>
-		<property name="hz" value="4.5"></property>
-		<property name="marca" value="Intell"></property>
-		<property name ="grafica3" ref="grafica3"></property>		
-	</bean>
+	
 	
 	<!-- TARJETA GRÁFICA -->
 	<bean id="grafica1" class="TarjetaGrafica" scope="singleton">
 		<property name="precio" value="300"></property>
 		<property name="marca" value="Nvidia"></property>
-		<property name="rgraf" ref="rgraf"></property>
+		<property name="ram" ref="rgraf"></property>
 		<property name="modelo" value="gtx1080"></property>
 	</bean>
 	
 	<bean id="grafica2" class="TarjetaGrafica" scope="singleton">
 		<property name="precio" value="300"></property>
 		<property name="marca" value="Nvidia"></property>
-		<property name="rgraf" ref="rgraf"></property>
+		<property name="ram" ref="rgraf"></property>
 		<property name="modelo" value="gtx1080"></property>
 	</bean>
 	<bean id="grafica3" class="TarjetaGrafica" scope="singleton">
 		<property name="precio" value="300"></property>
 		<property name="marca" value="Nvidia"></property>
-		<property name="rgraf" ref="rgraf"></property>
+		<property name="ram" ref="rgraf"></property>
 		<property name="modelo" value="gtx1080"></property>
 	</bean>
-	<bean id="listaGrafica" class="TarjetaGrafica">
+	<bean id="listaGrafica" class="java.util.ArrayList">
 		<constructor-arg>
 			<list value-type="TarjetaGrafica">
 				<ref bean="grafica1"/>
@@ -68,16 +63,16 @@
 	<!-- PERIFÉRICOS -->
 	
 	<bean id="periferico1" class="Periferico">
-		<property name="tipoPeriferico" value="TECLADO"></property>
+		<property name="nombre" value="TECLADO"></property>
 		<property name="precio" value="45"></property>
 		<property name="marca" value="IBM"></property>
 	</bean>
 	<bean id="periferico2" class="Periferico">
-		<property name="tipoPeriferico" value="PANTALLA"></property>
+		<property name="nombre" value="PANTALLA"></property>
 		<property name="precio" value="200"></property>
 		<property name="marca" value="Samsung"></property>
 	</bean>
-	<bean id="listaPerifericos" class="Periferico">
+	<bean id="listaPerifericos" class="java.util.ArrayList">
 		<constructor-arg>
 			<list value-type="Periferico">
 				<ref bean="periferico1"/>
@@ -87,26 +82,35 @@
 	</bean>
 	
 	<!-- PLACA BASE -->
-	<bean id="placaBase" class="Placabase">
+	<bean id="placa" class="Placabase">
 		<property name="precio" value="30"></property>
 		<property name="marca" value="Asus"></property>
 		<property name="modelo" value="Modelo"></property>
 	</bean>
 	
+	<!-- PROCESADOR -->
+	<bean id="procesador" class="Procesador" scope="singleton">
+		<property name="precio" value="300"></property>
+		<property name="hz" value="4.5"></property>
+		<property name="marca" value="Intell"></property>
+		<property name ="tarjetaIntegrada" ref="grafica3"></property>		
+	</bean>
 	
+	
+	<!-- ORDENADOR  -->
 	<bean id="pc" class="Ordenador" scope="singleton">
 		<property name="marca" value="hp"></property>
 		
 		<!-- ListaRAM -->
-		<property name="listaRam" ref="listaRam"></property>
+		<property name="listaRam" ref="listaRams"></property>
 		<!-- PROCESADOR -->
 		<property name="procesador" ref="procesador"></property>
 		<!-- TARJETA GRÁFICA -->
-		<property name="listaGrafica" ref="listaGrafica"></property>
+		<property name="listaTarjetaGrafica" ref="listaGrafica"></property>
 		<!-- PERIFÉRICOS -->
 		<property name="listaPerifericos" ref="listaPerifericos"></property>
 		<!-- PLACA BASE -->
-		<property name="placaBase" ref="placaBase"></property>	
+		<property name="placabase" ref="placa"></property>	
 		
 	</bean>
 </beans>
