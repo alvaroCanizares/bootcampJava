@@ -22,6 +22,7 @@ public class Ordenador {
 //		this.placabase = placabase;
 //		precio = calcularPrecioComponentes();
 //	}
+	public Ordenador() {}
 	
 
 
@@ -81,18 +82,19 @@ public class Ordenador {
 		
 		for (Ram ram : listaRam) {
 			totalRam += ram.getPrecio();
-			System.out.println(totalRam);
+			
 		}
-		
+		System.out.println(totalRam);
 		for (TarjetaGrafica grafica : listaTarjetaGrafica) {
 			totalGrafica += grafica.getPrecio();
-			System.out.println(totalGrafica);
+			
 		}
-		
+		System.out.println(totalGrafica);
 		for(Periferico periferico : listaPerifericos) {
 			totalPeriferico += periferico.getPrecio();
-			System.out.println(totalPeriferico);
+			
 		}
+		System.out.println(totalPeriferico);
 		total = totalRam + procesador.getPrecio() + totalGrafica + totalPeriferico + placabase.getPrecio();
 		
 	return total;	
