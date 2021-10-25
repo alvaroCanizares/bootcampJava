@@ -14,6 +14,7 @@ public class Main {
 		context = new AnnotationConfigApplicationContext(ConfiguracionSpring.class);		
 		DaoOrdenador daoOrdenador = context.getBean("daoOrdenador",DaoOrdenador.class);
 	
+		
 		daoOrdenador.generarFichero();
 
 		
