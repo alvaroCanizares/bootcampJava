@@ -3,9 +3,9 @@
 xmlns="http://xmlns.jcp.org/xml/ns/javaee"
  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" 
  version="4.0">
-  <display-name>Ej18_VideojuegoSpringMVC</display-name>
+  <display-name>Ej20_VideojuegoSpringMVCJPAData</display-name>
   <welcome-file-list>
-    <welcome-file>index.html</welcome-file>
+    <welcome-file>formulario.jsp</welcome-file>
   </welcome-file-list>
   
   <!-- 
@@ -31,6 +31,6 @@ xmlns="http://xmlns.jcp.org/xml/ns/javaee"
   </servlet>
   <servlet-mapping>
     <servlet-name>spring-mvc</servlet-name>
-    <url-pattern>/mvc/*</url-pattern>
+    <url-pattern>/</url-pattern>
   </servlet-mapping>
 </web-app>
